@@ -1,0 +1,32 @@
+@import 'variables';
+
+.main-container {
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-page-circle{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $spash-color;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    transition: transform .5s;
+
+    h2{
+        color: white;
+    }
+}
+
+.main-page-circle:hover{
+    transform: scale(1.5)
+}
+        
+
+    
