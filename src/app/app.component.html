@@ -4,16 +4,22 @@
       <h2>Darshan Satya</h2>
   </div>
 </div>
-<div id="second" class="main-page-container">
-  <div class="main-page-circle">
-      <h2>Darshan Satya</h2>
+
+<div id="second" class="projects-container">
+  <div class="counter-circle" (click)="scrollInto('third')">
+      <h2>{{counter}}+</h2>
+  </div>
+  <div class="github-fade-in" *ngIf="counter > 55">
+    <h1><a href="https://github.com/darshangit" target="_blank">Github Projects</a></h1>
   </div>
 </div>
-<div id="third" class="main-page-container">
-  <div class="main-page-circle">
-      <h2>Darshan Satya</h2>
+<div id="third" class="experience-container">
+  <div class="experience-fade">
+      <h2>Experience</h2>
   </div>
 </div>
+
+
 <div id="fourth" class="main-page-container">
   <div class="main-page-circle">
       <h2>Darshan Satya</h2>

@@ -8,7 +8,7 @@
     align-items: center
 }
 
-.main-page-circle{
+.main-page-circle, .experience-fade{
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -24,8 +24,57 @@
     }
 }
 
+.projects-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.counter-circle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $counter-color;
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+    transition: transform .5s;
+
+    h2{
+        color: #FFF3F2;
+    }
+}
+
+.github-fade-in{
+    display: flex;
+    align-items: center;
+    animation: fadein 5s;
+    padding-left: 40px;
+    a {
+        color: $spash-color;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
 .main-page-circle:hover{
     transform: scale(1.5)
+}
+
+.counter-circle:hover{
+    transform: scale(1.5)
+}
+
+.experience-fade:hover {
+    animation: fadeout 1s;
 }
         
 
