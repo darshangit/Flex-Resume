@@ -25,4 +25,4 @@ export class AppComponent {
     takeWh.subscribe(val => this.counter = this.counter + 1);
     }
   }
-}
+
