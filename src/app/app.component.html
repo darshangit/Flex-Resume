@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div *ngIf="techElementSelected" class="d-flex flex-column container py-5" id="techClass">
+  <div *ngIf="techElementSelected" class="d-flex flex-column justify-content-center container py-5" id="techClass">
     <div class="row">
       <div class="col-md-4">
         <div class="counter" [ngClass]="{'animated flipInX' : counter === 56}">
@@ -32,7 +32,7 @@
           <h1>Github Projects</h1>
         </div>
       </div>
-      <div class="card col-md-8 animated zoomInRight">
+      <div class="col-md-8 animated zoomInRight">
         <div class="card-header text-center headingSizes">
           <h1>Technologies</h1>
         </div>
@@ -65,34 +65,34 @@
     </div>
   </div>
 
-  <div *ngIf="expierienceElementSelected" class="d-flex flex-column container" id="expClass">
+  <div *ngIf="expierienceElementSelected" class="d-flex flex-column justify-content-center container py-5" id="expClass">
     <div class="row">
       <div class="col-md-8">
-        <div class="d-flex justify-content-between align-items-end">
-          <div class="imageWidth">
+        <div class="d-flex justify-content-between align-items-end companyRow1">
+          <div class="imageWidth animated zoomIn">
             <img src="../assets/sg.png" class="img-fluid rounded">
-            <h5>2017 - Present</h5>
+            <h3><span class="badge badge-success">2017 - Present</span></h3>
             <p>Tech Pillar</p>
           </div>
 
-          <div class="imageWidth">
+          <div class="imageWidth animated zoomIn">
             <img src="../assets/cognizant.png" class="img-fluid rounded">
-            <h5>2016 - 2017</h5>
-            <p>Associate</p>
+            <h6><span class="badge badge-secondary">2016 - 2017</span></h6>
+            <p>Associate - Projects</p>
           </div>
         </div>
 
-        <div class="d-flex justify-content-between align-items-end">
-          <div class="imageWidth">
+        <div class="d-flex justify-content-between align-items-end companyRow2">
+          <div class="imageWidth animated zoomIn">
             <img src="../assets/infosys.jpg" class="img-fluid xerox rounded">
-            <h5>2017 - Present</h5>
-            <p>Tech Pillar</p>
+            <h6><span class="badge badge-secondary">2011 - 2015</span></h6>
+            <p>Technology Analyst</p>
           </div>
 
-          <div class="imageWidth">
+          <div class="imageWidth animated zoomIn">
             <img src="../assets/xerox.png" class="img-fluid  xerox rounded">
-            <h5>2016 - 2017</h5>
-            <p>Associate</p>
+            <h6><span class="badge badge-secondary">2015 - 2016</span></h6>
+            <p>System Dev Specialist</p>
           </div>
         </div>
       </div>
@@ -109,11 +109,33 @@
     </div>
     <div class="row">
       <div class="col-md-12 py-5">
-        <div class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('expClass')">
+        <div *ngIf="experienceCounter === 7" class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('gitProjClass')">
           <i class="far fa-arrow-alt-circle-down fadownblack fa-4x animated bounceInUp"></i>
         </div>
       </div>
     </div>
+  </div>
 
+  <div *ngIf="githubProjectsSelected" class="d-flex flex-column justify-content-center container py-5" id="gitProjClass">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="counter" [ngClass]="{'animated flipInX' : gitProjCounter === 400}">
+          {{gitProjCounter}}+
+        </div>
+        <div *ngIf="gitProjCounter === 400" class="animated zoomInUp headingSizes">
+          <h1>Github Contributions</h1>
+        </div>
+      </div>
+      <div *ngIf="gitProjCounter === 400" class="col-md-8 contribution">
+        <img src="../assets/contri.PNG" class="img-fluid rounded animated flipInY">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 py-5">
+        <div *ngIf="gitProjCounter === 400" class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('expClass')">
+          <i class="far fa-arrow-alt-circle-down fadownblack fa-4x animated bounceInUp"></i>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

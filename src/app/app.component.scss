@@ -109,15 +109,11 @@
 }
 
 #expClass {
-    // .img-fluid {
-    //     max-width: 45%;
-    // }
+  height: 100vh;
+}
 
-    // .xerox {
-    //     width: 450px;
-    //     height: 112px;
-    //     max-width: 45%;
-    //   }
+#techClass{
+  height: 100vh;
 }
 
 .imageWidth{
@@ -128,4 +124,38 @@
         max-width: 45%;
     }
 }
+
+.companyRow1{
+
+  div:nth-child(1){
+    animation-delay: 4s;
+  }
+
+  div:nth-child(2){
+    animation-delay: 3s;
+  }
+  p {
+    font-weight: 100;
+    font-size: 15px;
+  }
+}
+
+.companyRow2{
+
+  div:nth-child(1){
+    // animation: tada;
+    // animation-duration: 2s;
+    animation-delay: 1s;
+  }
+
+  div:nth-child(2){
+    animation-delay: 2s;
+  }
+  p {
+    font-weight: 100;
+    font-size: 15px;
+  }
+}
+
+
 

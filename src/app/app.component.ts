@@ -12,19 +12,28 @@ export class AppComponent {
   title = 'app';
   counter = 0;
   experienceCounter = 0;
+  gitProjCounter = 0;
 
   selectedElement: string = null;
+
   techElementSelected: boolean;
   expierienceElementSelected: boolean;
+  githubProjectsSelected: boolean;
 
   scrollInto = element => {
     this.selectedElement = element;
+
     this.techElementSelected = this.techElementSelected
       ? true
       : this.selectedElement === 'techClass';
+
     this.expierienceElementSelected = this.expierienceElementSelected
       ? true
       : this.selectedElement === 'expClass';
+
+      this.githubProjectsSelected = this.githubProjectsSelected
+      ? true
+      : this.selectedElement === 'gitProjClass';
 
     const incomingElementObservable = of(1);
     const observablePiping = incomingElementObservable.pipe(delay(100));
@@ -40,6 +49,10 @@ export class AppComponent {
       if (element === 'expClass') {
         this.experienceCounterIncrementor();
       }
+
+      if (element === 'gitProjClass') {
+        this.gitContributionsIncrementor();
+      }
     });
   }
 
@@ -52,11 +65,18 @@ export class AppComponent {
 
   experienceCounterIncrementor = () => {
     this.experienceCounter = 0;
-    const source = interval(250);
+    const source = interval(650);
     const takeWh = source.pipe(takeWhile(() => this.experienceCounter < 7));
     takeWh.subscribe(
       () => (this.experienceCounter = this.experienceCounter + 1)
     );
+  }
+
+  gitContributionsIncrementor = () => {
+    this.gitProjCounter = 0;
+    const source = interval(70);
+    const takeWh = source.pipe(takeWhile(() => this.gitProjCounter < 400));
+    takeWh.subscribe(() => (this.gitProjCounter = this.gitProjCounter + 10));
   }
 
 }
