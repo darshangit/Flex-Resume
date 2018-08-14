@@ -1,5 +1,5 @@
 <div class="d-flex flex-column">
-  <div class="banner">
+  <div class="banner" id="landing">
     <div class="overlay animated fadeIn">
       <div class="d-flex justify-content-center flex-column container">
         <div class="row">
@@ -72,7 +72,7 @@
           <div class="imageWidth animated zoomIn">
             <img src="../assets/sg.png" class="img-fluid rounded">
             <h3>
-              <span class="badge badge-success">2017 - Present</span>
+              <span class="badge badge-success">2016 - Present</span>
             </h3>
             <p>Tech Pillar</p>
           </div>
@@ -80,7 +80,7 @@
           <div class="imageWidth animated zoomIn">
             <img src="../assets/cognizant.png" class="img-fluid rounded">
             <h6>
-              <span class="badge badge-secondary">2016 - 2017</span>
+              <span class="badge badge-secondary">2016</span>
             </h6>
             <p>Associate - Projects</p>
           </div>
@@ -98,7 +98,7 @@
           <div class="imageWidth animated zoomIn">
             <img src="../assets/xerox.png" class="img-fluid  xerox rounded">
             <h6>
-              <span class="badge badge-secondary">2015 - 2016</span>
+              <span class="badge badge-secondary">2015</span>
             </h6>
             <p>System Dev Specialist</p>
           </div>
@@ -184,6 +184,13 @@
     <div class="endbanner">
       <div class="overlay animated fadeIn">
         <div class="d-flex justify-content-center flex-column container">
+          <div class="row">
+            <div class="col-md-12 py-5">
+              <div class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('landing')">
+                <i class="far fa-arrow-alt-circle-up faupblack fa-4x animated bounceInUp"></i>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-12">
               <div class="text-center hero animated bounceInDown">

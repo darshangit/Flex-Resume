@@ -67,14 +67,12 @@ export class AppComponent {
   }
 
   gitProjectsIncrementor = () => {
-    this.counter = 0;
     const source = interval(70);
     const takeWh = source.pipe(takeWhile(() => this.counter <= 55));
     takeWh.subscribe(() => (this.counter = this.counter + 1));
   }
 
   experienceCounterIncrementor = () => {
-    this.experienceCounter = 0;
     const source = interval(650);
     const takeWh = source.pipe(takeWhile(() => this.experienceCounter < 7));
     takeWh.subscribe(
@@ -83,7 +81,6 @@ export class AppComponent {
   }
 
   gitContributionsIncrementor = () => {
-    this.gitProjCounter = 0;
     const source = interval(70);
     const takeWh = source.pipe(takeWhile(() => this.gitProjCounter < 400));
     takeWh.subscribe(() => (this.gitProjCounter = this.gitProjCounter + 10));
