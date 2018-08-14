@@ -19,6 +19,8 @@ export class AppComponent {
   techElementSelected: boolean;
   expierienceElementSelected: boolean;
   githubProjectsSelected: boolean;
+  passionSelected: boolean;
+  endSelected: boolean;
 
   scrollInto = element => {
     this.selectedElement = element;
@@ -31,9 +33,17 @@ export class AppComponent {
       ? true
       : this.selectedElement === 'expClass';
 
-      this.githubProjectsSelected = this.githubProjectsSelected
+    this.githubProjectsSelected = this.githubProjectsSelected
       ? true
       : this.selectedElement === 'gitProjClass';
+
+    this.passionSelected = this.passionSelected
+      ? true
+      : this.selectedElement === 'passionsClass';
+
+    this.endSelected = this.endSelected
+      ? true
+      : this.selectedElement === 'endClass';
 
     const incomingElementObservable = of(1);
     const observablePiping = incomingElementObservable.pipe(delay(100));
@@ -78,5 +88,4 @@ export class AppComponent {
     const takeWh = source.pipe(takeWhile(() => this.gitProjCounter < 400));
     takeWh.subscribe(() => (this.gitProjCounter = this.gitProjCounter + 10));
   }
-
 }

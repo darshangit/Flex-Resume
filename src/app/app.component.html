@@ -71,13 +71,17 @@
         <div class="d-flex justify-content-between align-items-end companyRow1">
           <div class="imageWidth animated zoomIn">
             <img src="../assets/sg.png" class="img-fluid rounded">
-            <h3><span class="badge badge-success">2017 - Present</span></h3>
+            <h3>
+              <span class="badge badge-success">2017 - Present</span>
+            </h3>
             <p>Tech Pillar</p>
           </div>
 
           <div class="imageWidth animated zoomIn">
             <img src="../assets/cognizant.png" class="img-fluid rounded">
-            <h6><span class="badge badge-secondary">2016 - 2017</span></h6>
+            <h6>
+              <span class="badge badge-secondary">2016 - 2017</span>
+            </h6>
             <p>Associate - Projects</p>
           </div>
         </div>
@@ -85,13 +89,17 @@
         <div class="d-flex justify-content-between align-items-end companyRow2">
           <div class="imageWidth animated zoomIn">
             <img src="../assets/infosys.jpg" class="img-fluid xerox rounded">
-            <h6><span class="badge badge-secondary">2011 - 2015</span></h6>
+            <h6>
+              <span class="badge badge-secondary">2011 - 2015</span>
+            </h6>
             <p>Technology Analyst</p>
           </div>
 
           <div class="imageWidth animated zoomIn">
             <img src="../assets/xerox.png" class="img-fluid  xerox rounded">
-            <h6><span class="badge badge-secondary">2015 - 2016</span></h6>
+            <h6>
+              <span class="badge badge-secondary">2015 - 2016</span>
+            </h6>
             <p>System Dev Specialist</p>
           </div>
         </div>
@@ -132,8 +140,65 @@
     </div>
     <div class="row">
       <div class="col-md-12 py-5">
-        <div *ngIf="gitProjCounter === 400" class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('expClass')">
+        <div *ngIf="gitProjCounter === 400" class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('passionsClass')">
           <i class="far fa-arrow-alt-circle-down fadownblack fa-4x animated bounceInUp"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="passionSelected" class="d-flex flex-column justify-content-center container py-5" id="passionsClass">
+
+    <div class="d-flex justify-content-between align-items-end flex-wrap mainpassionrow">
+      <div class="col-md-3 card mx-2 animated bounceInDown">
+        <h2>My Principles</h2>
+        <ul>
+          <li>Dedication</li>
+          <li>Hardwork</li>
+          <li>Perseverance</li>
+          <li>Positive Attitude</li>
+        </ul>
+      </div>
+      <div class="col-md-4 card my-2 animated bounceInDown">
+        <h2>Attitude is Everything</h2>
+        <p>Having close to 7 years of experience across mammoth companies, every day I try to beat myself. Why? Cause thats
+          what it takes to be the best.</p>
+      </div>
+      <div class="col-md-4 card mx-2 animated bounceInDown">
+        <h2>My Passion</h2>
+        <p>My heart yearns to make production grade websites which are a treat to the eyes and which has seamless UX.</p>
+        <p>Node + Angular + Spring Boot + Mongo + GraphQL : These are the perfect recipe required to build any kind of a robust
+          scalable software.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 py-5">
+        <div class="text-center downArrowColor animated infinite pulse" (click)="scrollInto('endClass')">
+          <i class="far fa-arrow-alt-circle-down fadownblack fa-4x animated bounceInUp"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="endSelected" id="endClass">
+    <div class="endbanner">
+      <div class="overlay animated fadeIn">
+        <div class="d-flex justify-content-center flex-column container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center hero animated bounceInDown">
+                <a href="https://www.linkedin.com/in/darshan-satya-b5b775ba/" target="_blank">
+                  <i class="fab fa-linkedin mx-2"></i>
+                </a>
+                <a href="mailto:darshans1989@gmail.com?Subject=Darshan, you sound great for our company" target="_top">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="https://github.com/darshangit" target="_blank">
+                  <i class="fab fa-github mx-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
