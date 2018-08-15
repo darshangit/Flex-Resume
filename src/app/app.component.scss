@@ -109,11 +109,7 @@
   color: grey;
 }
 
-#expClass {
-  height: 100vh;
-}
-
-#techClass {
+#techClass, #gitProjClass, #expClass, #passionsClass {
   height: 100vh;
 }
 
@@ -154,10 +150,6 @@
     font-weight: 100;
     font-size: 15px;
   }
-}
-
-#passionsClass {
-  height: 100vh;
 }
 
 .mainpassionrow {
